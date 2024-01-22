@@ -1,0 +1,47 @@
+From 92c22b83d3da5c7f6f5d4eb13c4da08dc0d35028 Mon Sep 17 00:00:00 2001
+From: AnnaLoshyk <loshykanna@gmail.com>
+Date: Mon, 22 Jan 2024 03:09:44 +0200
+Subject: [PATCH 2/2] Add division and percentage
+
+---
+ calculator.cpp | 10 ++++++++++
+ calculator.h   |  4 ++--
+ 2 files changed, 12 insertions(+), 2 deletions(-)
+
+diff --git a/calculator.cpp b/calculator.cpp
+index df0040b..18331cc 100644
+--- a/calculator.cpp
++++ b/calculator.cpp
+@@ -14,3 +14,13 @@ int Calculator::Mul (double a, double b)
+ {
+     return a * b + 0.5;
+ }
++int Calculator::Div (double a, double b)
++{
++    return a/b;
++}
++int Calculator::Perc (double a, double b)
++{
++    return a*b/100;
++}
++
++
+diff --git a/calculator.h b/calculator.h
+index 066e358..cb14534 100644
+--- a/calculator.h
++++ b/calculator.h
+@@ -6,9 +6,9 @@ class Calculator
+ 	public:
+ 		int Add (double, double);
+ 		int Sub (double, double);
+-	public:
+-        	int Add (int, int);
+         	int Mul (double, double);
++		double Div (double, double);
++		double Perc (double, double);
+ };
+ 
+ #endif//CALCULATOR_H
+-- 
+2.17.1
+
